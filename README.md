@@ -1,9 +1,8 @@
-### *Konrad Mieszała*
+# *Konrad Mieszała*
 
-Procesor:
+Procesor na jakim pracuje :
 model name      : Intel(R) Core(TM) i3 CPU       M 350  @ 2.27GHz
-
-#Zadanie 1a)
+###Zadanie 1a)
 Pozbycie się białych znaków:
 ```sh
 time cat Train.csv | replace "\n" " " | replace "\r" "\n" > TrainPrzerobiony.csv
@@ -22,4 +21,10 @@ mongoimport --type csv -c Train --file TrainPrzerobiony.csv --headerline
 real    62m22.013s
 user    5m20.328s
 sys	1m12.556s
-
+```
+###Zadanie 1b)
+Zliczenie zaimportowanych rekordów.
+```sh
+> db.Train.count()
+6034195
+```
